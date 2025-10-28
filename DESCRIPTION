@@ -7,22 +7,10 @@ Authors@R:
            family = "Utzon",
            role = c("aut", "cre"), # There must be a "cre", but there can only be one
            email = "s153655@dtu.dk"), 
-    person(given = "firstname",
-           family = "lastname",
+    person(given = "Christian",
+           family = "Hussing",
            role = "aut",
-           email = "your@email.com"),
-    person(given = "firstname",
-           family = "lastname",
-           role = "aut",
-           email = "your@email.com"),
-    person(given = "firstname",
-           family = "lastname",
-           role = "aut",
-           email = "your@email.com")
-    person(given = "firstname",
-           family = "lastname",
-           role = "aut",
-           email = "your@email.com"))
+           email = "s150251@dtu.com"))
 Description: More about what it does (maybe more than one line).
     Continuation lines should be indented.
 License: MIT + file LICENSE
@@ -35,3 +23,6 @@ VignetteBuilder: knitr
 Depends: 
     R (>= 3.5)
 RoxygenNote: 7.3.2
+Imports: 
+    ggplot2,
+    stringr
