@@ -15,3 +15,6 @@ A character string respresenting the transcribed RNA sequence
 \description{
 Transcribe a DNA sequence into a RNA sequence
 }
+\examples{
+dna_to_RNA("ATTGCT")
+}

@@ -6,7 +6,7 @@
 #' @export
 #'
 #' @examples
-#' dna_to_RNA("ATTGCT)
+#' dna_to_RNA("ATTGCT")
 dna_to_RNA <- function(dna_sequence){
   rna_sequence <- gsub("T", "U", dna_sequence)
   rna_sequence <- gsub("t", "u", rna_sequence)
