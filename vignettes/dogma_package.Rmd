@@ -21,7 +21,7 @@ Pernille
 
 Lanjing
 
-Inma
+Inmaculada Echegoyan Venegas, s253701\@dtu.dk
 
 ## Summary
 
@@ -33,9 +33,26 @@ The dogma package is a collection of functions which enables the user to create 
 
 #### Function 1
 
+
+
 #### Function 2
 
-#### function 3
+The dna_to_RNA() function converts a DNA sequence into an RNA sequence by replacing all T (thymine) with U (uracil), both uppercase and lowercase. It uses the gsub() function to make the substitutions and returns the transcribed RNA sequence.
+
+```{r}
+
+dna_to_RNA <- function(dna_sequence){
+  rna_sequence <- gsub("T", "U", dna_sequence)
+  rna_sequence <- gsub("t", "u", rna_sequence)
+  return(rna_sequence)
+}
+
+```
+
+
+
+
+#### Function 3
 
 #### Translation
 
