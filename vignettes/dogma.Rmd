@@ -1,0 +1,67 @@
+---
+title: "dogma"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{dogma}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(dogma.package)
+```
+
+## Summary
+
+The dogma package is a collection of functions which enables the user to replicates the functions of the central dogma of molecular biology from generating the DNA sequence, transcription to translation. It can provide the count of all amino acids generated in a barplot. 
+
+#### Data
+
+The data used by the package includes a standard translation table for translating codons into amino acids.
+
+
+#### Function 1: Create DNA sequence
+
+The function create_DNA takes an integer, n, as input and creates a number of nucleotides. The distribution of nucleotides: A, T, G and C are randomly distributed. 
+
+**Argument and output**
+Input: n is an integer of nucleotides to be created.
+Output: string with nucleotides equeal to n. 
+
+
+#### Function 2: Transcription from DNA to RNA
+
+The dna_to_RNA() function converts a DNA sequence into an RNA sequence by replacing all T (thymine) with U (uracil), both uppercase and lowercase. It uses the gsub() function to make the substitutions and returns the transcribed RNA sequence.
+
+**Argument and output**
+Input: DNA sequence as a string
+Output: RNA sequence as a string
+
+
+#### Function 3: Going from RNA to Codons
+
+The function mRNA_to_codon takes RNA in a string as input to extract and replace with codons. The output of the function is a vector with multiple codons as strings seperated by ",".
+
+**Example Usage**
+```{r,message=FALSE}
+mRNA <- "AUGUCG"
+mRNA_to_codon(mRNA)
+```
+
+
+#### Function 4: 
+
+The function takes a vector with codons (output from function 3), and using the codon table, generates a string of amino acids. 
+
+#### Function 5: Count AA and present in barplot
+
+The function takes a string of amino acids (one letter abbreviations), counts the number of each amino acid, and generates a barplot showing the counts. The output of the function is the barplot. The function depends on the packages ggplot2 and stringr.
+
+The function is performed by typing "aa_plot(data)" with data being a string of amino acids.
