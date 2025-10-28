@@ -1,6 +1,6 @@
 Package: dogma.package
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Replicate the central dogma of molecular biology
 Version: 0.1.0
 Authors@R: 
   c(person(given = "Helena",
@@ -23,8 +23,11 @@ Authors@R:
            family = "Buisan",
            role = "aut",
            email = "s256855@dtu.dk"))
-Description: More about what it does (maybe more than one line).
-    Continuation lines should be indented.
+Description: A package that replicates the functions of
+    the central dogma of molecular biology from generating
+    the DNA sequence, transcription to translation. 
+    It can provide the count of all amino acids generated
+    in a matrix. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
