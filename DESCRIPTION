@@ -7,10 +7,22 @@ Authors@R:
            family = "Utzon",
            role = c("aut", "cre"), # There must be a "cre", but there can only be one
            email = "s153655@dtu.dk"), 
-    person(given = "Christian",
-           family = "Hussing",
+    person(given = "Pernille",
+           family = "Renkwitz",
            role = "aut",
-           email = "s150251@dtu.com"))
+           email = "s204637@dtu.dk"),
+    person(given = "firstname",
+           family = "lastname",
+           role = "aut",
+           email = "your@email.com"),
+    person(given = "Inma",
+           family = "Echegoyan",
+           role = "aut",
+           email = "your@email.com"),
+    person(given = "firstname",
+           family = "lastname",
+           role = "aut",
+           email = "your@email.com"))
 Description: More about what it does (maybe more than one line).
     Continuation lines should be indented.
 License: MIT + file LICENSE
@@ -18,7 +30,8 @@ Encoding: UTF-8
 LazyData: true
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    testthat (>= 3.0.0)
 VignetteBuilder: knitr
 Depends: 
     R (>= 3.5)
