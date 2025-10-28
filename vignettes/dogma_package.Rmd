@@ -7,14 +7,23 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-# The dogma.package
+```{r,include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
 
-Github link: <https://github.com/rforbiodatascience25/group_24_package>
+```{r,setup}
+library(dogma.package)
+```
 
+
+The Github link to the package can be found at [dogma.package](https://github.com/rforbiodatascience25/group_24_package).
 
 ## Summary
 
-The dogma package is a collection of functions which enables the user to create DNA sequences and manipulate these into RNA, codons, amino acids and fianlly, plot the accourance of each amino acid.
+The dogma package is a collection of functions which enables the user to create DNA sequences and manipulate these into RNA, codons, amino acids and fianlly, plot the occurrence of each amino acid in a matrix structure. 
 
 ## Components
 
@@ -24,7 +33,16 @@ The dogma package is a collection of functions which enables the user to create 
 
 #### Function 2
 
-#### function 3
+#### Going from RNA to Codons
+
+The function mRNA_to_codon takes RNA in a string as input to extract and replace with codons. The output of the function is a vector with multiple codons as strings seperated by ",".
+
+**Example Usage**
+```{r,message=FALSE}
+mRNA <- "AUGUCG"
+mRNA_to_codon(mRNA)
+```
+
 
 #### Translation
 
@@ -36,15 +54,3 @@ The function takes a string of amino acids (one letter abbreviations), counts th
 
 The function is performed by typing "aa_plot(data)" with data being a string of amino acids.
 
-## 
-
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
-```
-
-```{r setup}
-library(dogma.package)
-```
