@@ -31,7 +31,24 @@ The dogma package is a collection of functions which enables the user to create 
 
 #### Function 1
 
+
+
 #### Function 2
+
+The dna_to_RNA() function converts a DNA sequence into an RNA sequence by replacing all T (thymine) with U (uracil), both uppercase and lowercase. It uses the gsub() function to make the substitutions and returns the transcribed RNA sequence.
+
+```{r}
+
+dna_to_RNA <- function(dna_sequence){
+  rna_sequence <- gsub("T", "U", dna_sequence)
+  rna_sequence <- gsub("t", "u", rna_sequence)
+  return(rna_sequence)
+}
+
+```
+
+
+#### Function 3
 
 #### Going from RNA to Codons
 
@@ -42,7 +59,6 @@ The function mRNA_to_codon takes RNA in a string as input to extract and replace
 mRNA <- "AUGUCG"
 mRNA_to_codon(mRNA)
 ```
-
 
 #### Translation
 
