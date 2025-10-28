@@ -44,6 +44,17 @@ The dna_to_RNA() function converts a DNA sequence into an RNA sequence by replac
 Input: DNA sequence as a string
 Output: RNA sequence as a string
 
+**Function**
+```{r}
+
+dna_to_RNA <- function(dna_sequence){
+  rna_sequence <- gsub("T", "U", dna_sequence)
+  rna_sequence <- gsub("t", "u", rna_sequence)
+  return(rna_sequence)
+}
+
+```
+
 
 #### Function 3: Going from RNA to Codons
 
