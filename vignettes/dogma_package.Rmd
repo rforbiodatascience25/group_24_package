@@ -29,6 +29,9 @@ The dogma package is a collection of functions which enables the user to create 
 
 #### Data
 
+The data used by the package includes a standard translation table for translating codons into amino acids.
+
+
 #### Function 1
 
 
