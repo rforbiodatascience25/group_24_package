@@ -37,21 +37,13 @@ The dogma package is a collection of functions which enables the user to create 
 
 #### function 3
 
-#### Function 4
+#### Translation 
+
+The function takes a vector with codons (output from function 3)
 
 #### Function 5
 
 ## 
-
-#### Function 1:
-
-#### Function 2:
-
-#### Function 3:
-
-#### Function 4: Translation
-
-#### Function 5:
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
