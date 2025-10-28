@@ -7,8 +7,8 @@
 #' @export
 #'
 #' @examples
-#' # Usage
-#' mRNA_to_codon(mRNA, start)
+#' mRNA <- "AUGUCG"
+#' mRNA_to_codon(mRNA)
 mRNA_to_codon <- function(mRNA, start = 1){
   len_mRNA <- nchar(mRNA)
   codons <- substring(mRNA,
