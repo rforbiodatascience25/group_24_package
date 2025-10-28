@@ -1,0 +1,65 @@
+---
+title: "dogma_package"
+output: rmarkdown::pdf_document
+vignette: >
+  %\VignetteIndexEntry{dogma_package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# The dogma.package
+
+Github link: <https://github.com/rforbiodatascience25/group_24_package>
+
+### Authors
+
+Helena Utzon, S153655\@dtu.dk
+
+Christian
+
+Pernille
+
+Lanjing
+
+Inma
+
+## Summary
+
+The dogma package is a collection of functions which enables the user to create DNA sequences and manipulate these into RNA, codons, amino acids and fianlly, plot the accourance of each amino acid.
+
+## Components
+
+#### Data
+
+#### Function 1
+
+#### Function 2
+
+#### function 3
+
+#### Function 4
+
+#### Function 5
+
+## 
+
+#### Function 1:
+
+#### Function 2:
+
+#### Function 3:
+
+#### Function 4: Translation
+
+#### Function 5:
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(dogma.package)
+```
