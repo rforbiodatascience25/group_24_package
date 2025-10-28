@@ -15,7 +15,7 @@ Github link: <https://github.com/rforbiodatascience25/group_24_package>
 
 Helena Utzon, S153655\@dtu.dk
 
-Christian
+Christian, s150251\@dtu.dk
 
 Pernille
 
@@ -37,11 +37,15 @@ The dogma package is a collection of functions which enables the user to create 
 
 #### function 3
 
-#### Translation 
+#### Translation
 
 The function takes a vector with codons (output from function 3)
 
-#### Function 5
+#### Function 5: aa_plot
+
+The function takes a string of amino acids (one letter abbreviations), counts the number of each amino acid, and generates a barplot showing the counts. The output of the function is the barplot. The function depends on the packages ggplot2 and stringr.
+
+The function is performed by typing "aa_plot(data)" with data being a string of amino acids.
 
 ## 
 
