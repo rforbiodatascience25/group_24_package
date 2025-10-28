@@ -23,7 +23,7 @@ The Github link to the package can be found at [dogma.package](https://github.co
 
 ## Summary
 
-The dogma package is a collection of functions which enables the user to create DNA sequences and manipulate these into RNA, codons, amino acids and fianlly, plot the occurrence of each amino acid in a matrix structure. 
+The dogma package is a collection of functions which enables the user to create DNA sequences and manipulate these into RNA, codons, amino acids and fianlly, plot the occurrence of each amino acid in barplot. 
 
 ## Components
 
