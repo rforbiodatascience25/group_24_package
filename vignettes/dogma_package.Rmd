@@ -11,17 +11,6 @@ vignette: >
 
 Github link: <https://github.com/rforbiodatascience25/group_24_package>
 
-### Authors
-
-Helena Utzon, S153655\@dtu.dk
-
-Christian, s150251\@dtu.dk
-
-Pernille
-
-Lanjing
-
-Inma
 
 ## Summary
 
