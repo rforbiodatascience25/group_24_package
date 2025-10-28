@@ -11,18 +11,18 @@ Authors@R:
            family = "Renkwitz",
            role = "aut",
            email = "s204637@dtu.dk"),
-    person(given = "firstname",
-           family = "lastname",
+    person(given = "Christian",
+           family = "Hussing",
            role = "aut",
-           email = "your@email.com"),
+           email = "s150251@dtu.dk"),
     person(given = "Inma",
            family = "Echegoyan",
            role = "aut",
-           email = "your@email.com"),
-    person(given = "firstname",
-           family = "lastname",
+           email = "s253701@dtu.dk"),
+    person(given = "Lanjing",
+           family = "Buisan",
            role = "aut",
-           email = "your@email.com"))
+           email = "s256855@dtu.dk"))
 Description: More about what it does (maybe more than one line).
     Continuation lines should be indented.
 License: MIT + file LICENSE
