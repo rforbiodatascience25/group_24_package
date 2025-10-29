@@ -1,37 +1,44 @@
 Package: dogma.package
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Replicate the central dogma of molecular biology
 Version: 0.1.0
 Authors@R: 
   c(person(given = "Helena",
            family = "Utzon",
            role = c("aut", "cre"), # There must be a "cre", but there can only be one
            email = "s153655@dtu.dk"), 
-    person(given = "firstname",
-           family = "lastname",
+    person(given = "Pernille",
+           family = "Renkwitz",
            role = "aut",
-           email = "your@email.com"),
-    person(given = "firstname",
-           family = "lastname",
+           email = "s204637@dtu.dk"),
+    person(given = "Christian",
+           family = "Hussing",
            role = "aut",
-           email = "your@email.com"),
-    person(given = "firstname",
-           family = "lastname",
+           email = "s150251@dtu.dk"),
+    person(given = "Inma",
+           family = "Echegoyan",
            role = "aut",
-           email = "your@email.com")
-    person(given = "firstname",
-           family = "lastname",
+           email = "s253701@dtu.dk"),
+    person(given = "Lanjing",
+           family = "Buisan",
            role = "aut",
-           email = "your@email.com"))
-Description: More about what it does (maybe more than one line).
-    Continuation lines should be indented.
+           email = "s256855@dtu.dk"))
+Description: A package that replicates the functions of
+    the central dogma of molecular biology from generating
+    the DNA sequence, transcription to translation. 
+    It can provide the count of all amino acids generated
+    in a matrix. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    testthat (>= 3.0.0)
 VignetteBuilder: knitr
 Depends: 
     R (>= 3.5)
 RoxygenNote: 7.3.2
+Imports: 
+    ggplot2,
+    stringr

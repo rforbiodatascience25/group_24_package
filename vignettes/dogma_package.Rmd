@@ -1,0 +1,75 @@
+---
+title: "dogma_package"
+output: rmarkdown::pdf_document
+vignette: >
+  %\VignetteIndexEntry{dogma_package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r,include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r,setup}
+library(dogma.package)
+```
+
+
+The Github link to the package can be found at [dogma.package](https://github.com/rforbiodatascience25/group_24_package).
+
+## Summary
+
+The dogma package is a collection of functions which enables the user to create DNA sequences and manipulate these into RNA, codons, amino acids and fianlly, plot the occurrence of each amino acid in barplot. 
+
+## Components
+
+#### Data
+
+The data used by the package includes a standard translation table for translating codons into amino acids.
+
+
+#### Function 1
+
+
+
+#### Function 2
+
+The dna_to_RNA() function converts a DNA sequence into an RNA sequence by replacing all T (thymine) with U (uracil), both uppercase and lowercase. It uses the gsub() function to make the substitutions and returns the transcribed RNA sequence.
+
+```{r}
+
+dna_to_RNA <- function(dna_sequence){
+  rna_sequence <- gsub("T", "U", dna_sequence)
+  rna_sequence <- gsub("t", "u", rna_sequence)
+  return(rna_sequence)
+}
+
+```
+
+
+#### Function 3
+
+#### Going from RNA to Codons
+
+The function mRNA_to_codon takes RNA in a string as input to extract and replace with codons. The output of the function is a vector with multiple codons as strings seperated by ",".
+
+**Example Usage**
+```{r,message=FALSE}
+mRNA <- "AUGUCG"
+mRNA_to_codon(mRNA)
+```
+
+#### Translation
+
+The function takes a vector with codons (output from function 3)
+
+#### Function 5: aa_plot
+
+The function takes a string of amino acids (one letter abbreviations), counts the number of each amino acid, and generates a barplot showing the counts. The output of the function is the barplot. The function depends on the packages ggplot2 and stringr.
+
+The function is performed by typing "aa_plot(data)" with data being a string of amino acids.
+
