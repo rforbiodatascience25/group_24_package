@@ -20,6 +20,18 @@ library(dogma.package)
 
 The Github link to the package can be found at [dogma.package](https://github.com/rforbiodatascience25/group_24_package).
 
+#### Contributors 
+
+Christian Hussing, S150251
+
+Helena Utzon, S153655
+
+Inmaculada Echegoyan Venegas, s253701
+
+Lanjing Buisan Fernandez, s256855
+
+Pernille Renkwitz, s204637
+
 ## Summary
 
 The dogma package is a collection of functions which enables the user to create DNA sequences and manipulate these into RNA, codons, amino acids and fianlly, plot the occurrence of each amino acid in barplot.
@@ -30,19 +42,27 @@ The dogma package is a collection of functions which enables the user to create 
 
 The data used by the package includes a standard translation table for translating codons into amino acids.
 
-#### Function 1
+#### Function 1: create_DNA
+
+The function create_DNA takes an integer, n, as input and creates a number of nucleotides. The distribution of nucleotides: A, T, G and C are randomly distributed.
+
+**Argument and output** Input: n is an integer of nucleotides to be created. Output: string with nucleotides equeal to n.
+
+##### Example: 
+
+```{r}
+Create_DNA(10)
+```
 
 #### Function 2: dna_to_RNA
 
 The dna_to_RNA() function converts a DNA sequence into an RNA sequence by replacing all T (thymine) with U (uracil), both uppercase and lowercase. It uses the gsub() function to make the substitutions and returns the transcribed RNA sequence.
 
+##### Example:
+
 ```{r}
 
-dna_to_RNA <- function(dna_sequence){
-  rna_sequence <- gsub("T", "U", dna_sequence)
-  rna_sequence <- gsub("t", "u", rna_sequence)
-  return(rna_sequence)
-}
+dna_to_RNA("TTTTTTAGCC")
 
 ```
 
@@ -50,7 +70,7 @@ dna_to_RNA <- function(dna_sequence){
 
 The function mRNA_to_codon takes RNA in a string as input to extract and replace with codons. The output of the function is a vector with multiple codons as strings seperated by ",".
 
-##### **Example Usage**
+##### **Example:**
 
 ```{r,message=FALSE}
 mRNA <- "AUGUCG"
@@ -61,7 +81,7 @@ mRNA_to_codon(mRNA)
 
 The function takes a vector with RNA codons and translates the input into amino acids (one letter abreviations).
 
-##### Example Usage
+##### Example:
 
 ```{r}
 codons <- c("UUU", "UAU", "AAA")
@@ -73,3 +93,9 @@ translation(codons)
 The function takes a string of amino acids (one letter abbreviations), counts the number of each amino acid, and generates a barplot showing the counts. The output of the function is the barplot. The function depends on the packages ggplot2 and stringr.
 
 The function is performed by typing "aa_plot(data)" with data being a string of amino acids.
+
+##### Example:
+
+```{r}
+aa_plot("MGTVQSDPLKFYARNIHCEWLTGPASMVDRQKTYNGLHFIPEWOCLVT")
+```
