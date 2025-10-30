@@ -38,7 +38,7 @@ The create_DNA() function returns a random DNA sequence of a length specify by t
 Create_DNA <- function(n){
      nucleotides <- sample(c("A", "T", "G", "C"), size = n, replace = TRUE)
      DNA_sequence <- paste0(nucleotides, collapse = "")
-     return(DNA_sequence)
+     return(DNA_sequence)}
 ```
 
 
