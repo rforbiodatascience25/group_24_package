@@ -29,11 +29,19 @@ The data used by the package includes a standard translation table for translati
 
 #### Function 1: Create DNA sequence
 
-The function create_DNA takes an integer, n, as input and creates a number of nucleotides. The distribution of nucleotides: A, T, G and C are randomly distributed. 
-
-**Argument and output**
-Input: n is an integer of nucleotides to be created.
-Output: string with nucleotides equeal to n. 
+The create_DNA() function returns a random DNA sequence of a length specify by the user. The new sequence will be formed by A, T, G and C nucleotides.
+Input: n <-- is the number (integer) of characters for defining the length of the sequence.
+Output: The string with length of n containing the nucleotides in a random order.
+```{r}
+Create_DNA <- function(n){
+     nucleotides <- sample(c("A", "T", "G", "C"), size = n, replace = TRUE)
+     DNA_sequence <- paste0(nucleotides, collapse = "")
+     return(DNA_sequence)}
+```
+Example:
+```{r}
+create_DNA(4)
+```
 
 
 #### Function 2: Transcription from DNA to RNA
