@@ -33,7 +33,13 @@ The data used by the package includes a standard translation table for translati
 
 
 #### Function 1
-
+The create_DNA() function returns a random DNA sequence of a length specify by the user. The new sequence will be formed by A, T, G and C nucleotides.
+```{r}
+Create_DNA <- function(n){
+     nucleotides <- sample(c("A", "T", "G", "C"), size = n, replace = TRUE)
+     DNA_sequence <- paste0(nucleotides, collapse = "")
+     return(DNA_sequence)
+```
 
 
 #### Function 2
