@@ -7,81 +7,86 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r,include = FALSE}
+```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
 ```
 
-```{r,setup}
+```{r setup}
 library(dogma.package)
 ```
 
-
 The Github link to the package can be found at [dogma.package](https://github.com/rforbiodatascience25/group_24_package).
+
+## Contributors
+
+Helena Utzon (S153655), Christian Hussing (S150251), Pernille Renkwitz (s204637), Inmaculada Echegoyan Venegas (s253701), Lanjing Buisan Fernandez, (s256855)
 
 ## Summary
 
-The dogma package is a collection of functions which enables the user to create DNA sequences and manipulate these into RNA, codons, amino acids and fianlly, plot the occurrence of each amino acid in barplot. 
+The dogma package is a collection of functions which enables the user to create DNA sequences and manipulate these into RNA, codons, amino acids and fianlly, plot the occurrence of each amino acid in barplot.
 
 ## Components
 
 #### Data
 
-The data used by the package includes a standard translation table for translating codons into amino acids.
+The data used by the package includes a standard translation table for translating codons into amino acids (codon_table)
 
+#### create_DNA() function:
 
-#### Function 1
-The create_DNA() function returns a random DNA sequence of a length specify by the user. The new sequence will be formed by A, T, G and C nucleotides.
-Input: n <-- is the number (integer) of characters for defining the length of the sequence.
-Output: The string with length of n containing the nucleotides in a random order.
+The create_DNA() function returns a random DNA sequence of a length specify by the user. The new sequence will be formed by A, T, G and C nucleotides. Input: n \<-- is the number (integer) of characters for defining the length of the sequence. Output: The string with length of n containing the nucleotides in a random order.
+
 ```{r}
-Create_DNA <- function(n){
-     nucleotides <- sample(c("A", "T", "G", "C"), size = n, replace = TRUE)
-     DNA_sequence <- paste0(nucleotides, collapse = "")
-     return(DNA_sequence)}
-```
-Example:
-```{r}
-create_DNA(4)
+Create_DNA(30)
 ```
 
+#### dna_to_RNA() function: 8
 
-#### Function 2
-
-The dna_to_RNA() function converts a DNA sequence into an RNA sequence by replacing all T (thymine) with U (uracil), both uppercase and lowercase. It uses the gsub() function to make the substitutions and returns the transcribed RNA sequence.
+The dna_to_RNA() function converts a string containing a DNA sequence (e.g. output from Create_DNA()) into an RNA sequence by replacing all T (thymine) with U (uracil), both uppercase and lowercase. It uses the gsub() function to make the substitutions and returns the transcribed RNA sequence.
 
 ```{r}
-
-dna_to_RNA <- function(dna_sequence){
-  rna_sequence <- gsub("T", "U", dna_sequence)
-  rna_sequence <- gsub("t", "u", rna_sequence)
-  return(rna_sequence)
-}
+DNA_seq <- Create_DNA(30)
+mRNA_seq <- dna_to_RNA(DNA_seq)
+DNA_seq
 
 ```
 
-
-#### Function 3
-
-#### Going from RNA to Codons
+#### mRNA_to_codon() function:
 
 The function mRNA_to_codon takes RNA in a string as input to extract and replace with codons. The output of the function is a vector with multiple codons as strings seperated by ",".
 
-**Example Usage**
-```{r,message=FALSE}
-mRNA <- "AUGUCG"
-mRNA_to_codon(mRNA)
+```{r}
+codon_seq <- mRNA_to_codon(mRNA_seq)
+codon_seq
 ```
 
-#### Translation
+#### translation() function: 
 
-The function takes a vector with codons (output from function 3)
+The function takes a vector with strings of three letters (codons) of an mRNA-string (e.g. output from function 3) and translates each codon into amino acids (one letter abreviations) using the codon_table (see Data).
 
-#### Function 5: aa_plot
+```{r}
+aa_seq <- translation(codon_seq)
+aa_seq
+```
 
-The function takes a string of amino acids (one letter abbreviations), counts the number of each amino acid, and generates a barplot showing the counts. The output of the function is the barplot. The function depends on the packages ggplot2 and stringr.
+#### aa_plot() function:
+
+The function takes a string of amino acids (one letter abbreviations, e.g. the output of translation()), counts the number of each amino acid, and generates a barplot showing the counts. The output of the function is the barplot. The function depends on the packages ggplot2 and stringr.
 
 The function is performed by typing "aa_plot(data)" with data being a string of amino acids.
 
+```{r}
+aa_plot(aa_seq)
+```
+
+## Future perspectives
+
+The dogma.package can be used to simulate the processes of the central dogma, including creating DNA sequences and converting the sequence into RNA, codons, amino acids, and finally visualizing the contents of an amino acid sequence. \
+The package includes dependencies on ggplot2 and stringr, which means that the user may end up downloading a large number of packages, as ggplot2 and stringr also could have depedencies which would need to be installed before using the dogma.package(). \
+If any of the crucial functions in these packages change, it could impact the functionality of downstream packages.
+
+When using functions from other packages, the `package::function()`namespace is the optimal way to call the function, as it specifies the package the function belongs to. The `library(package)`overrides any functions with the same name that has already been loaded.
+
+The dogma.package could be expanded to include additional functions, such as furher plotting of amino acids to show the occurrence of amino acids according to their properties (hydrophobic, hydrofilic etc.) and their position in the final protein.
